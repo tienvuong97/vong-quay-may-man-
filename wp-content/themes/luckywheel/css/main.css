@@ -1,0 +1,196 @@
+/*
+Description:
+    Contains all the styles for the winning wheel page.
+    
+Verison History:
+    2012-01-28, Douglas McKechie
+    - Created based off earlier version.
+    
+    2015-09-26, Douglas McKechie
+    - Minor updates for the 2.0 winwheel example.
+*/
+
+body {
+    font-family: arial;
+    background-image: url(../images/background-tet-nguyen-dan_105957525.jpg);
+    background-repeat: no-repeat;
+}
+table {
+    position: relative;
+}
+.wheel {
+    width: 50%;
+}
+#thongbao {
+    width: 50%;
+}
+#thongbao img {
+    width: 50%;
+    height: 50%;
+}
+.d-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+#canvas {
+    width: 640px;
+}
+
+/* Sets the background image for the wheel */
+td.the_wheel {
+    background-position: center;
+    background-repeat: none;
+}
+
+/* Do some css reset on selected elements */
+h1,
+p {
+    margin: 0;
+}
+/* tr {
+    top: 50%;
+    transform: translateY(25%);
+} */
+
+div.power_controls {
+    margin-right: 70px;
+    display: none;
+}
+
+div.html5_logo {
+    margin-left: 70px;
+}
+
+/* Styles for the power selection controls */
+table.power {
+    background-color: #cccccc;
+    cursor: pointer;
+    border: 1px solid #333333;
+    display: none;
+}
+
+table.power th {
+    background-color: white;
+    cursor: default;
+}
+
+td.pw1 {
+    background-color: #6fe8f0;
+}
+
+td.pw2 {
+    background-color: #86ef6f;
+}
+
+td.pw3 {
+    background-color: #ef6f6f;
+}
+
+/* Style applied to the spin button once a power has been selected */
+.clickable {
+    cursor: pointer;
+}
+
+/* Other misc styles */
+.margin_bottom {
+    margin-bottom: 5px;
+}
+#spin_button {
+    width: 130px;
+    height: 130px;
+    left: 10px;
+    top: 10px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 13;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: rgb(131, 58, 180);
+    background: linear-gradient(
+        180deg,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(253, 29, 29, 1) 0%,
+        rgba(252, 176, 69, 1) 78%
+    );
+}
+#spin_button::after {
+    content: "QUAY";
+    text-align: center;
+    line-height: 140px;
+    color: #ffffff;
+    font-size: 35px;
+    text-shadow: -1px 0px 0 #fff, 3px 2px 0 rgba(193, 193, 193, 0.3);
+    position: relative;
+    z-index: 13;
+    font-weight: bold;
+    display: block;
+}
+#spin_button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 28px 15px;
+    border-color: transparent transparent #fe0c03 transparent;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-90%);
+}
+.btn_quay::before {
+    content: "";
+    width: 138px;
+    height: 138px;
+    left: 10px;
+    top: 10px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 13;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: #fe0c03;
+}
+#border_outside {
+    background-image: url(../images/vonqquay2.png);
+    background-size: contain;
+    width: 650px;
+    height: 650px;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    z-index: 12;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+#border_outside::after {
+    content: '';
+    width: 620px;
+    top: 16px;
+    left: 16px;
+    height: 620px;
+    position: absolute;
+    box-shadow: inset 0px 0px 66px 65px #00000042;
+    border-radius: 50%;
+}
+td.the_wheel {
+    position: relative;
+    right: 50%;
+
+    top: 50%;
+    transform: translateX(90%) translateY(25%);
+}
+.table-thongbao {
+    bottom: 0;
+    transform: translateY(80%);
+}
+#thongbao span {
+    position: absolute;
+    font-size: 25px;
+    left: 75%;
+    transform: translateX(-50%);
+}
